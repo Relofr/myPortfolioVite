@@ -1,15 +1,15 @@
 <template>
-    <div :class="bgColor + ' ' + textColor + ' ' + orientation">
-        <p>{{ title }}</p>
+    <div :class="bgColor + ' ' + fontColor">
+        <p v-if="title" :class="`title` + ' ' + fontSize">{{ title }}</p>
         <div class="split">
-            <div>
+            <div v-if="leftContent">
                 <p>{{ leftContent }}</p>
             </div>
-            <div>
+            <div v-if="rightContent">
                 <p>{{ rightContent }}</p>
             </div>
-            <div v-if="imageSrc">
-                <img :src="`/src/assets/images/` + imageSrc" :alt="alt">
+            <div v-if="imageSrc" v-for="(key, value) in post.icons" :key="index">
+                <img :src="`/src/assets/icons/` + key">
             </div>
         </div>
     </div>
@@ -17,48 +17,61 @@
 
 <script>
 export default {
+    data() {
+        return {
+            post:
+                { icons: { "Figma": "figma.png",  "Invision" : "invision.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" } },
+        }
+    },
     props: {
         bgColor: {
             type: String,
-            required: true
+            required: false
         },
-        textColor: {
+        fontColor: {
             type: String,
-            required: true
+            required: false
         },
-        orientation: {
+        fontSize: {
             type: String,
-            required: true
+            required: false
         },
         title: {
             type: String,
-            required: true
+            required: false
         },
         leftContent: {
             type: String,
-            required: true
+            required: false
         },
         rightContent: {
             type: String,
-            required: true
+            required: false
         },
         imageSrc: {
-            type: String,
-            required: true
+            type: Boolean,
+            required: false
         },
         alt: {
             type: String,
-            required: true
+            required: false
         }
     }
 }
 </script>
 
 <style>
-.horizontal {
-    
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
 }
-.vertical {
 
+.split {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
 }
 </style>

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
+  <Navbar />
   <div id="app">
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
@@ -10,7 +11,6 @@ import Navbar from './components/Navbar.vue'
       </transition>
     </router-view>
   </div>
-  <Navbar />
 </template>
 
 <style>
@@ -22,6 +22,7 @@ body {
 .fade-leave-active {
   transition: opacity 0.3s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
