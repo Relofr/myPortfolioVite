@@ -3,7 +3,7 @@
   --clr-cta: #910011;
   --clr-secondary: #2a3a4a;
   --clr-primary-text: rgba(0, 0, 0, 80%);
-  --clr-accent-text: #910011;
+  --clr-accent-text: #ffffff;
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
 
@@ -28,15 +28,37 @@
   --fs-button: var(--fs-16);
 }
 
-/* @media (min-width: 50em) {
-  :root {
-    --fs-body: var(--fs-16);
-    --fs-primary-heading: var(--fs-56);
-    --fs-secondary-heading: var(--fs-40);
-
-    --fs-nav: var(--fs-300);
+/* Tablets and under  */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-wrap: wrap;
+    align-content: center;
   }
-} */
+}
+
+/* Mobile  */
+@media (max-width: 500px) {
+  .navbar {
+    height: 80px !important;
+    position: fixed;
+    z-index: 2;
+  }
+
+  .navbar .flex {
+    display: flex;
+    justify-content: center !important;
+  }
+  .logo{
+    display: none !important;
+  }
+
+  .navbar ul {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px
+  }
+}
 
 /* Box sizing rules */
 *,
@@ -179,10 +201,11 @@ svg {
   font-size: var(--fs-56);
 }
 
+
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0 40px;
 }
 
 .flex {

@@ -1,8 +1,9 @@
 <template>
 
-    <Section title="Hello" content="content heheheh" headingType="primary" bgColor="bg-accent-100" showImage />
+    <Section heroImage sectionTitle="Tracy Aviary UX/UI Redesign"/>
 
     <SectionBreak title="The Process" />
+    
     <SectionBreak title="Wireframes" />
     <SectionBreak title="Design" />
     <SectionBreak title="wrapping up & future plans" />

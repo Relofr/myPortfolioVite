@@ -30,17 +30,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .navbar {
     height: 70px;
+    width: 100%;
 }
 
 a {
-  color: var(--clr-primary);
-  font-size: var(--fs-nav);
+    color: var(--clr-primary);
+    font-size: var(--fs-nav);
 }
 
 .navbar .flex {
+    padding: 0 40px;
     justify-content: space-between;
 }
 

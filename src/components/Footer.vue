@@ -38,6 +38,8 @@
 
 <style>
 .footer {
+    position: relative;
+    bottom: 0;
     height: 200px;
 }
 

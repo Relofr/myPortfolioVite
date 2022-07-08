@@ -6,21 +6,16 @@ import Footer from './components/Footer.vue'
 <template>
   <Navbar />
   <div class="container">
-    <div id="app">
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
-          <component :is="Component"></component>
-        </transition>
-      </router-view>
-    </div>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
   </div>
   <Footer />
 </template>
 
 <style>
-#app {
-  height: 100vh;
-}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

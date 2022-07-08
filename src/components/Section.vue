@@ -1,27 +1,11 @@
 <template>
-    <!-- <div :class="`container` + bgColor + ' ' + fontColor">
-        <p v-if="title" :class="`even-columns` + ' ' + fontSize">
-            {{ title }}
-        </p>
-        <div class="split">
-            <div v-show="leftContent">
-                <p>{{ leftContent }}</p>
-            </div>
-            <div v-show="rightContent">
-                <p>{{ rightContent }}</p>
-            </div>
-            <div v-show="showIcons" v-for="(key, value) in icons" :key="index">
-                <img :src="`/src/assets/icons/` + key">
-            </div>
-            <div v-show="showImage" v-for="(key, value) in images" :key="index">
-                <img :src="`/src/assets/images/` + key">
-            </div>
+    <div :class="bgColor">
+        <div v-if="heroImage">
+            <img class="hero-image" src="../assets/images/hero-image.avif" alt="">
+            <p class="container section-title fw-bold fs-primary-heading">{{ sectionTitle }}</p>
         </div>
-    </div> -->
-
-    <div :class="`container` + ' ' + bgColor">
-        <div class="even-columns">
-            <div>
+        <div class="container flex even-columns">
+            <div class="content">
                 <h1 v-if="title" :class="`fs-` + headingType + `-heading` + ' ' + `fw-bold`">{{ title }}</h1>
                 <p v-if="content">{{ content }}</p>
             </div>
@@ -45,6 +29,14 @@ export default {
     },
     props: {
         bgColor: {
+            type: String,
+            required: false
+        },
+        heroImage: {
+            type: Boolean,
+            required: true
+        },
+        sectionTitle: {
             type: String,
             required: false
         },
@@ -77,16 +69,27 @@ export default {
 </script>
 
 <style scoped>
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 0 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    object-fit: cover;
+}
+
 .title {
     display: flex;
     justify-content: center;
     padding: 15px 0;
 }
 
-.split {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.even-columns {
     justify-content: space-evenly;
     padding: 15px;
 }

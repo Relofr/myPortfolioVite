@@ -1,5 +1,5 @@
 <template>
-    <div class="sectionBlock">
+    <div class="container sectionBlock fw-bold text-accent fs-32">
         {{ title }}
     </div>
 </template>
@@ -19,13 +19,11 @@ export default {
 .sectionBlock {
     display: flex;
     height: 120px;
-    background-color: var(--clr-primary-400);
-    color: var(--clr-primary);
-    font-size: var(--fs-32);
-    border-radius: 5px;
+    background-color: var(--clr-secondary);
+    border-radius: 3px;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    margin: 70px;
+    margin: 80px 0px;
 }
 </style>

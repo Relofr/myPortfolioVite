@@ -10,7 +10,7 @@
                 <button @click="downloadResume()" class="button button-primary">Resume</button>
             </div>
         </div>
-        <!-- <CaseStudiesVue /> -->
+        <CaseStudiesVue />
     </div>
 </template>
 
