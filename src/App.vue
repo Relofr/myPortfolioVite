@@ -1,23 +1,26 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
   <Navbar />
-  <div id="app">
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component"></component>
-      </transition>
-    </router-view>
+  <div class="container">
+    <div id="app">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
+    </div>
   </div>
+  <Footer />
 </template>
 
 <style>
-body {
-  font-family: var(--ff-primary);
+#app {
+  height: 100vh;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

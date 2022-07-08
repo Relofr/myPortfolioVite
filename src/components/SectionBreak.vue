@@ -15,18 +15,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .sectionBlock {
     display: flex;
-    width: 100%;
     height: 120px;
     background-color: var(--clr-primary-400);
-    color: var(--clr-accent-100);
-    font-size: var(--fs-800);
+    color: var(--clr-primary);
+    font-size: var(--fs-32);
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    margin: 80px 0px 80px 0px;
+    margin: 70px;
 }
 </style>

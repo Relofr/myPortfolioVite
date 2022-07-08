@@ -1,15 +1,35 @@
 <template>
-    <div :class="bgColor + ' ' + fontColor">
-        <p v-if="title" :class="`title` + ' ' + fontSize">{{ title }}</p>
+    <!-- <div :class="`container` + bgColor + ' ' + fontColor">
+        <p v-if="title" :class="`even-columns` + ' ' + fontSize">
+            {{ title }}
+        </p>
         <div class="split">
-            <div v-if="leftContent">
+            <div v-show="leftContent">
                 <p>{{ leftContent }}</p>
             </div>
-            <div v-if="rightContent">
+            <div v-show="rightContent">
                 <p>{{ rightContent }}</p>
             </div>
-            <div v-if="imageSrc" v-for="(key, value) in post.icons" :key="index">
+            <div v-show="showIcons" v-for="(key, value) in icons" :key="index">
                 <img :src="`/src/assets/icons/` + key">
+            </div>
+            <div v-show="showImage" v-for="(key, value) in images" :key="index">
+                <img :src="`/src/assets/images/` + key">
+            </div>
+        </div>
+    </div> -->
+
+    <div :class="`container` + ' ' + bgColor">
+        <div class="even-columns">
+            <div>
+                <h1 v-if="title" :class="`fs-` + headingType + `-heading` + ' ' + `fw-bold`">{{ title }}</h1>
+                <p v-if="content">{{ content }}</p>
+            </div>
+            <div v-show="showIcons" v-for="(key, value) in icons" :key="index">
+                <img :src="`/src/assets/icons/` + key" :alt="alt">
+            </div>
+            <div v-show="showImage" v-for="(key, value) in images" :key="index">
+                <img :src="`/src/assets/images/` + key" :alt="alt">
             </div>
         </div>
     </div>
@@ -19,8 +39,8 @@
 export default {
     data() {
         return {
-            post:
-                { icons: { "Figma": "figma.png",  "Invision" : "invision.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" } },
+            icons: { "Figma": "figma.png", "Invision": "invision.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" },
+            images: { "ProfilePicture": "ProfilePicture.jpeg" },
         }
     },
     props: {
@@ -28,27 +48,23 @@ export default {
             type: String,
             required: false
         },
-        fontColor: {
-            type: String,
-            required: false
-        },
-        fontSize: {
-            type: String,
-            required: false
-        },
         title: {
             type: String,
             required: false
         },
-        leftContent: {
+        content: {
             type: String,
             required: false
         },
-        rightContent: {
+        headingType: {
             type: String,
+            required: true
+        },
+        showIcons: {
+            type: Boolean,
             required: false
         },
-        imageSrc: {
+        showImage: {
             type: Boolean,
             required: false
         },
@@ -60,7 +76,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .title {
     display: flex;
     justify-content: center;

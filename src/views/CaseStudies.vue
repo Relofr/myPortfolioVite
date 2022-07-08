@@ -1,0 +1,18 @@
+<template>
+
+    <Section title="Hello" content="content heheheh" headingType="primary" bgColor="bg-accent-100" showImage />
+
+    <SectionBreak title="The Process" />
+    <SectionBreak title="Wireframes" />
+    <SectionBreak title="Design" />
+    <SectionBreak title="wrapping up & future plans" />
+
+</template>
+
+<script setup>
+import Section from '../components/Section.vue';
+import SectionBreak from '../components/SectionBreak.vue';
+</script>
+
+<style>
+</style>
