@@ -1,19 +1,16 @@
 <template>
-    <div :class="bgColor">
-        <div v-if="heroImage">
-            <img class="hero-image" src="../assets/images/hero-image.avif" alt="">
-            <p class="container section-title fw-bold fs-primary-heading">{{ sectionTitle }}</p>
+    <div>
+        <div class="image-container">
+            <img v-show="heroImage" class="hero-image" :src="`src/assets/images/` + heroImage" alt="">
+            <div class="section-title fw-bold fs-56 text-accent">{{ sectionTitle }}</div>
         </div>
         <div class="container flex even-columns">
             <div class="content">
-                <h1 v-if="title" :class="`fs-` + headingType + `-heading` + ' ' + `fw-bold`">{{ title }}</h1>
-                <p v-if="content">{{ content }}</p>
+                <h1 v-show="title" :class="`fs-` + headingType + `-heading` + ' ' + `fw-bold`">{{ title }}</h1>
+                <p v-show="content">{{ content }}</p>
             </div>
-            <div v-show="showIcons" v-for="(key, value) in icons" :key="index">
+            <div class="skills-icons" v-show="showIcons" v-for="(key, value) in skills" :key="value">
                 <img :src="`/src/assets/icons/` + key" :alt="alt">
-            </div>
-            <div v-show="showImage" v-for="(key, value) in images" :key="index">
-                <img :src="`/src/assets/images/` + key" :alt="alt">
             </div>
         </div>
     </div>
@@ -23,64 +20,66 @@
 export default {
     data() {
         return {
-            icons: { "Figma": "figma.png", "Invision": "invision.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" },
-            images: { "ProfilePicture": "ProfilePicture.jpeg" },
+            skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro":"Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" }
         }
     },
     props: {
-        bgColor: {
-            type: String,
-            required: false
-        },
         heroImage: {
-            type: Boolean,
-            required: true
+            type: String,
         },
         sectionTitle: {
             type: String,
-            required: false
         },
         title: {
             type: String,
-            required: false
         },
         content: {
             type: String,
-            required: false
         },
         headingType: {
             type: String,
-            required: true
         },
         showIcons: {
-            type: Boolean,
-            required: false
+            type: Boolean
         },
         showImage: {
-            type: Boolean,
-            required: false
+            type: String,
         },
         alt: {
             type: String,
-            required: false
         }
     }
 }
 </script>
 
 <style scoped>
-.section-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0 0 0;
-}
-
 .hero-image {
     width: 100%;
     height: 400px;
     background-position: center;
     object-fit: cover;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.section-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #fff; */
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, .60); */
+}
+
+.skills-icons {
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -92,5 +91,10 @@ export default {
 .even-columns {
     justify-content: space-evenly;
     padding: 15px;
+}
+
+img {
+    width: 100%;
+    height: 64px;
 }
 </style>
