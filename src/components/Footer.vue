@@ -70,7 +70,8 @@ a {
 .social-icons img {
     width: 32px;
     height: 32px;
-    filter: invert(1)
+    filter: invert(1);
+    transition: transform .2s ease;
 }
 
 .social-icons img:hover {

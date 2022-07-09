@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .sectionBlock {
     display: flex;
     height: 120px;
@@ -25,5 +25,6 @@ export default {
     justify-content: center;
     text-transform: uppercase;
     margin: 80px 0px;
+    text-align: center;
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
 
     <Section sectionTitle="Tracy Aviary UX/UI Redesign" heroImage="hero-image.png" />
-    <Section title="my skills" showIcons />
 
     <SectionBreak title="The Process" />
     

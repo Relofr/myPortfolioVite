@@ -1,4 +1,17 @@
 :root {
+  /* --mainColor: #ffffff;
+  --secondaryColor: #910011;
+
+  --borderColor: #2a3a4a;
+
+  --mainText: rgba(0, 0, 0, 80%);
+  --secondaryText: #4b5156;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700; */
+
+
   --clr-primary: #ffffff;
   --clr-cta: #910011;
   --clr-secondary: #2a3a4a;
@@ -38,10 +51,9 @@
 
 /* Mobile  */
 @media (max-width: 500px) {
-  .navbar {
-    height: 80px !important;
-    position: fixed;
-    z-index: 2;
+
+  .sectionBlock {
+    font-size: var(--fs-18) !important;
   }
 
   .navbar .flex {
@@ -92,7 +104,7 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   font-family: var(--ff-primary);
   color: var(--clr-primary-text);
 }

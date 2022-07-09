@@ -4,24 +4,27 @@
             <img v-show="heroImage" class="hero-image" :src="`src/assets/images/` + heroImage" alt="">
             <div class="section-title fw-bold fs-56 text-accent">{{ sectionTitle }}</div>
         </div>
+        <div class="column-title fw-bold fs-primary-heading flex">{{ title }}</div>
         <div class="container flex even-columns">
             <div class="content">
-                <h1 v-show="title" :class="`fs-` + headingType + `-heading` + ' ' + `fw-bold`">{{ title }}</h1>
                 <p v-show="content">{{ content }}</p>
             </div>
             <div class="skills-icons" v-show="showIcons" v-for="(key, value) in skills" :key="value">
-                <img :src="`/src/assets/icons/` + key" :alt="alt">
+                <Tooltip :text="value">
+                    <img :src="`/src/assets/icons/` + key" :alt="alt">
+                </Tooltip>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Tooltip from './Tooltip.vue'
 export default {
     data() {
         return {
-            skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro":"Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" }
-        }
+            skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro": "Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" }
+        };
     },
     props: {
         heroImage: {
@@ -48,7 +51,8 @@ export default {
         alt: {
             type: String,
         }
-    }
+    },
+    components: { Tooltip }
 }
 </script>
 
@@ -96,5 +100,9 @@ export default {
 img {
     width: 100%;
     height: 64px;
+}
+
+.column-title {
+    justify-content: center;
 }
 </style>

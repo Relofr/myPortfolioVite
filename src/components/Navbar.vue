@@ -34,6 +34,7 @@ export default {
 .navbar {
     height: 70px;
     width: 100%;
+    position: relative;
 }
 
 a {
