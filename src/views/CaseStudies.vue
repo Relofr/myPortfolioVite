@@ -3,7 +3,7 @@
     <Section sectionTitle="Tracy Aviary UX/UI Redesign" heroImage="hero-image.png" />
 
     <SectionBreak title="The Process" />
-    
+
     <SectionBreak title="Wireframes" />
     <SectionBreak title="Design" />
     <SectionBreak title="wrapping up & future plans" />

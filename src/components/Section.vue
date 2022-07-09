@@ -1,19 +1,29 @@
 <template>
-    <div>
-        <div class="image-container">
-            <img v-show="heroImage" class="hero-image" :src="`src/assets/images/` + heroImage" alt="">
+    <div class="image-container">
+        <div v-show="heroImage" class="image-container">
+            <img class="hero-image" :src="`src/assets/images/` + heroImage" alt="">
             <div class="section-title fw-bold fs-56 text-accent">{{ sectionTitle }}</div>
         </div>
-        <div class="column-title fw-bold fs-primary-heading flex">{{ title }}</div>
-        <div class="container flex even-columns">
-            <div class="content">
-                <p v-show="content">{{ content }}</p>
+        <div class="even-columns">
+
+            <div class="col fw-semi-bold">
+                <p>{{ contentOne }}</p>
             </div>
-            <div class="skills-icons" v-show="showIcons" v-for="(key, value) in skills" :key="value">
-                <Tooltip :text="value">
-                    <img :src="`/src/assets/icons/` + key" :alt="alt">
-                </Tooltip>
+
+            <div v-show="showImage" class="image-container">
+                <div v-for="(key, value) in images" :key="value">
+                    <img :src="`/src/assets/images/` + key" :alt="alt">
+                </div>
             </div>
+
+            <div v-show="showIcons" class="skills-container">
+                <div class="skills-icons" v-for="(key, value) in skills" :key="value">
+                    <Tooltip :text="value">
+                        <img id="icon-image" :src="`/src/assets/icons/` + key" :alt="alt">
+                    </Tooltip>
+                </div>
+            </div>
+
         </div>
     </div>
 </template>
@@ -23,7 +33,10 @@ import Tooltip from './Tooltip.vue'
 export default {
     data() {
         return {
-            skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro": "Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" }
+            skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro": "Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" },
+            images: {
+                "ProfilePicture": "ProfilePicture.jpeg"
+            }
         };
     },
     props: {
@@ -33,10 +46,15 @@ export default {
         sectionTitle: {
             type: String,
         },
+
+
         title: {
             type: String,
         },
-        content: {
+        contentOne: {
+            type: String,
+        },
+        contentTwo: {
             type: String,
         },
         headingType: {
@@ -46,7 +64,7 @@ export default {
             type: Boolean
         },
         showImage: {
-            type: String,
+            type: Boolean,
         },
         alt: {
             type: String,
@@ -57,20 +75,11 @@ export default {
 </script>
 
 <style scoped>
-.hero-image {
-    width: 100%;
-    height: 400px;
-    background-position: center;
-    object-fit: cover;
-    text-align: center;
-    border-radius: 3px;
-}
 
 .image-container {
     position: relative;
     text-align: center;
 }
-
 .section-title {
     position: absolute;
     top: 50%;
@@ -80,29 +89,21 @@ export default {
     padding: 10px;
     /* background-color: rgba(0, 0, 0, .60); */
 }
-
-.skills-icons {
-    display: flex;
-    flex-direction: column;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-}
-
-.even-columns {
-    justify-content: space-evenly;
-    padding: 15px;
-}
-
-img {
+.hero-image {
     width: 100%;
-    height: 64px;
+    height: 400px;
+    background-position: center;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 3px;
+}
+.even-columns {
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
-.column-title {
-    justify-content: center;
+.even-columns>* {
+    flex: 1;
 }
 </style>
