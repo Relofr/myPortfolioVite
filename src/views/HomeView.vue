@@ -43,7 +43,7 @@ export default {
     align-items: center;
     gap: 40px;
     justify-content: center;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 110px);
     position: sticky;
 }
 

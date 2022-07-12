@@ -1,11 +1,11 @@
 <template>
     <div class="container about-view">
-        <Section skillsTitle="My Skills" showIcons/>
+        <Skills title="My Skills" showIcons/>
     </div>
 </template>
 
 <script setup>
-import Section from '../components/Section.vue'
+import Skills from '../components/Skills.vue'
 </script>
 
 <style>
