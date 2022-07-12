@@ -47,10 +47,6 @@ export default {
     position: sticky;
 }
 
-.about-me-content p {
-    padding: 0 0 10px;
-}
-
 #profile-picture {
     width: 350px;
 

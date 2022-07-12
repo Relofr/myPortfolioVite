@@ -1,29 +1,32 @@
 <template>
-    <div class="image-container">
-        <div v-show="heroImage" class="image-container">
+    <div class="section-container">
+        <div v-show="heroImage" class="section-container">
             <img class="hero-image" :src="`src/assets/images/` + heroImage" alt="">
             <div class="section-title fw-bold fs-56 text-accent">{{ sectionTitle }}</div>
         </div>
         <div class="even-columns">
 
-            <div class="col fw-semi-bold">
+            <div v-show="contentOne" class="col fw-semi-bold">
+                <p class="fw-bold fs-primary-heading">{{sectionTitle}}</p>
                 <p>{{ contentOne }}</p>
             </div>
 
-            <div v-show="showImage" class="image-container">
+            <div v-show="showImage" class="section-container">
                 <div v-for="(key, value) in images" :key="value">
                     <img :src="`/src/assets/images/` + key" :alt="alt">
                 </div>
             </div>
 
-            <div v-show="showIcons" class="skills-container">
+        </div>
+        <div v-show="showIcons" class="skills-container flex">
+            <div class="fw-bold fs-primary-heading">{{ skillsTitle }}</div>
+            <div class="icons-wrapper">
                 <div class="skills-icons" v-for="(key, value) in skills" :key="value">
                     <Tooltip :text="value">
                         <img id="icon-image" :src="`/src/assets/icons/` + key" :alt="alt">
                     </Tooltip>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -35,7 +38,7 @@ export default {
         return {
             skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro": "Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" },
             images: {
-                "ProfilePicture": "ProfilePicture.jpeg"
+                "ta-desktop": "ta-desktop.png"
             }
         };
     },
@@ -48,8 +51,11 @@ export default {
         },
 
 
-        title: {
+        skillsTitle: {
             type: String,
+        },
+        sectionTitle: {
+            type: String
         },
         contentOne: {
             type: String,
@@ -74,12 +80,12 @@ export default {
 }
 </script>
 
-<style scoped>
-
-.image-container {
+<style>
+.section-container {
     position: relative;
     text-align: center;
 }
+
 .section-title {
     position: absolute;
     top: 50%;
@@ -89,6 +95,7 @@ export default {
     padding: 10px;
     /* background-color: rgba(0, 0, 0, .60); */
 }
+
 .hero-image {
     width: 100%;
     height: 400px;
@@ -97,6 +104,7 @@ export default {
     text-align: center;
     border-radius: 3px;
 }
+
 .even-columns {
     display: flex;
     align-items: center;
@@ -105,5 +113,22 @@ export default {
 
 .even-columns>* {
     flex: 1;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-icons {
+    width: 64px;
+}
+
+.icons-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 25px 0 0;
 }
 </style>

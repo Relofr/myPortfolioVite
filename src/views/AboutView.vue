@@ -1,6 +1,6 @@
 <template>
     <div class="container about-view">
-        <Section title="My Skills" showIcons />
+        <Section skillsTitle="My Skills" showIcons/>
     </div>
 </template>
 
