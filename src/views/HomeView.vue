@@ -10,13 +10,13 @@
                 <button @click="downloadResume()" class="button button-primary">Resume</button>
             </div>
         </div>
-        <CaseStudiesVue />
+        <CaseStudiesView />
     </div>
 </template>
 
 <script setup>
 // import Hero from '../components/Hero.vue';
-import CaseStudiesVue from './CaseStudies.vue';
+import CaseStudiesView from './CaseStudiesView.vue';
 </script>
 
 <script>

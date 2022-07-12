@@ -21,9 +21,7 @@
 <script>
 export default {
     data() {
-        return {
-            skills: { "Figma": "figma.png", "Invision": "invision.png", "Miro": "Miro.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" }
-        };
+        return {};
     },
     props: {
         heroImage: {
