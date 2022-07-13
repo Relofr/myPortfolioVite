@@ -30,14 +30,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .navbar {
     height: 70px;
     width: 100%;
     position: relative;
 }
 
-a {
+a .navbar {
     color: var(--clr-primary);
     font-size: var(--fs-nav);
 }

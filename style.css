@@ -100,7 +100,7 @@ li {
 }
 
 a {
-  color: var(--clr-primary);
+  color: red;
 }
 
 /* Set core root defaults */
@@ -189,12 +189,12 @@ svg {
 
 .fs-primary-heading {
   font-size: var(--fs-primary-heading);
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .fs-secondary-heading {
   font-size: var(--fs-secondary-heading);
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .fs-14 {
@@ -242,7 +242,7 @@ svg {
   border-style: none;
   border-radius: 3px;
   text-transform: uppercase;
-  margin: 15px 0 0;
+  margin: 25px 0 0;
 }
 
 .button-primary:hover {

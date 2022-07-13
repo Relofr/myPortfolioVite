@@ -2,13 +2,13 @@
     <p id="case-studies-title" class="flex fw-bold fs-primary-heading">Case Studies</p>
     <div class="flex-grid-thirds">
         <div class="col">
-            <Card title="Tracy Aviary UX/UI" src="ta-desktop.png" />
+            <Card title="Tracy Aviary UX/UI" src="hero-ta.png" route="tracy-aviary" />
         </div>
         <div class="col">
-            <Card title="USDA Redesign" src="ta-desktop.png" />
+            <Card title="USDA Redesign" src="hero-usda.png" route="usda"/>
         </div>
         <div class="col">
-            <Card title="Tracy Aviary" src="ta-desktop.png" />
+            <Card title="DailyUI" src="hero-dailyui.png" route="daily-ui"/>
         </div>
     </div>
 </template>
