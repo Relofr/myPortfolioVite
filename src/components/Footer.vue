@@ -19,7 +19,7 @@
                             <RouterLink to="/">Home</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/projects">Work</RouterLink>
+                            <RouterLink to="/projects">Projects</RouterLink>
                         </li>
                         <li>
                             <RouterLink to="/about">About</RouterLink>

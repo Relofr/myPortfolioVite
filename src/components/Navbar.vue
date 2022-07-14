@@ -61,4 +61,13 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 550px) {
+    .logo {
+        display: none;
+    }
+    .main-nav {
+        justify-content: center;
+    }
+}
 </style>

@@ -54,7 +54,7 @@ export default {
     align-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .flex-grid-thirds {
         display: flex;
         flex-direction: column;

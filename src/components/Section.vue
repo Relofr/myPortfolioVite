@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 img,
 picture {
     max-width: 100%;
@@ -122,5 +122,18 @@ picture {
 
 .reverseColumns {
     flex-direction: row-reverse;
+}
+
+@media (max-width: 800px) {
+    .even-columns {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .even-columns>* {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 }
 </style>
