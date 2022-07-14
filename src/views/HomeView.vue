@@ -6,11 +6,16 @@
                 <p class="fs-primary-heading fw-bold"> {{ name }}</p>
                 <p class="fs-secondary-heading fw-semi-bold">{{ job }}</p>
                 <p>{{ bio }}</p>
-                <button @click="downloadResume()" class="button button-primary">Resume</button>
+                <button @click="downloadResume()" class="button button-primary">Resume <fa icon="file" size="lg"></fa>
+                </button>
             </div>
         </div>
-        <div class="down-arrow">hi</div>
-        <CaseStudiesView />
+        <div class="down-arrow">
+            <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="2xl" bounce></fa>
+        </div>
+        <div ref="caseStudies">
+            <CaseStudiesView />
+        </div>
     </div>
 </template>
 
@@ -31,19 +36,25 @@ export default {
     methods: {
         downloadResume() {
             window.open("https://drive.google.com/file/d/1r8OXqJwIf0fBbCHYqIz0P9WEDIuXsjRt/view?usp=sharing")
+        },
+        scrollToElement(refName) {
+            const el = this.$refs[refName]
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" })
+            }
         }
     }
 }
 </script>
 
-<style>
+<style lang="less">
 .about-me-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
     justify-content: center;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 150px);
 }
 
 #profile-picture {
@@ -52,8 +63,12 @@ export default {
 }
 
 .down-arrow {
-    transform: translateY(-32px);
+    transform: translateY(-20px);
     display: flex;
     justify-content: center;
+
+    & svg {
+        cursor: pointer;
+    }
 }
 </style>

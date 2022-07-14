@@ -3,12 +3,9 @@
         <div class="footer bg-secondary text-accent-100">
             <div class="flex">
                 <div class="social-icons">
-                    <a href="https://github.com/Relofr" target="_blank"><img class="profile-picture" alt="github icon"
-                            src="../assets/social-icons/github_icon.png" /></a>
-                    <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><img class="profile-picture"
-                            alt="linkedin icon" src="../assets/social-icons/linkedin_icon.png" /></a>
-                    <a href="mailto:ky13h4tch@gmail.com" target="_blank"><img class="profile-picture" alt="email icon"
-                            src="../assets/social-icons/email_icon.png" /></a>
+                    <a href="https://github.com/Relofr" target="_blank"><fa :icon="[ 'fab', 'github' ]"></fa></a>
+                    <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><fa :icon="[ 'fab', 'linkedin' ]"></fa></a>
+                    <a href="mailto:ky13h4tch@gmail.com" target="_blank"><fa icon="envelope"></fa></a>
                 </div>
                 <nav>
                     <ul role="nav-list">
@@ -67,14 +64,13 @@ a {
     flex-direction: row;
 }
 
-.social-icons img {
+.social-icons svg {
     width: 32px;
     height: 32px;
-    filter: invert(1);
     transition: transform .2s ease;
 }
 
-.social-icons img:hover {
+.social-icons svg:hover {
     transform: scale(1.2);
 }
 </style>

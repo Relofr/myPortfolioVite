@@ -68,7 +68,8 @@
     display: flex;
     justify-content: center !important;
   }
-  .logo{
+
+  .logo {
     display: none !important;
   }
 
@@ -114,6 +115,7 @@ body {
   height: 100vh;
   font-family: var(--ff-primary);
   color: var(--clr-primary-text);
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
@@ -130,11 +132,15 @@ a {
 
 /* Make images easier to work with */
 img,
-picture,
-svg {
+picture {
   max-width: 100%;
   display: block;
 }
+
+/* .svg-inline--fa {
+  width: 32px;
+  height: 32px;
+} */
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -157,6 +163,7 @@ svg {
 .text-primary {
   color: var(--clr-primary-text);
 }
+
 .text-secondary {
   color: var(--clr-secondary-text);
 }
@@ -241,14 +248,19 @@ svg {
 
 .button-primary {
   background-color: var(--clr-cta);
+  display: flex;
   color: var(--clr-primary);
   padding: 5px 15px;
+  gap: 10px;
   border-style: none;
-  border-radius: 4px;
+  border-radius: 3px;
   text-transform: uppercase;
   margin: 25px 0 0;
+  align-items: center;
+  flex-direction: row;
 }
 
 .button-primary:hover {
+  cursor: pointer;
   background-color: rgba(145, 0, 17, 80%)
 }
