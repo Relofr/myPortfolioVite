@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="footer bg-secondary text-accent-100">
-            <div class="container flex">
+            <div class="flex">
                 <div class="social-icons">
                     <a href="https://github.com/Relofr" target="_blank"><img class="profile-picture" alt="github icon"
                             src="../assets/social-icons/github_icon.png" /></a>
@@ -16,7 +16,7 @@
                             <RouterLink to="/">Home</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/work">Work</RouterLink>
+                            <RouterLink to="/projects">Work</RouterLink>
                         </li>
                         <li>
                             <RouterLink to="/about">About</RouterLink>

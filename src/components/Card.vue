@@ -2,7 +2,10 @@
     <router-link :to="`/` + route">
         <div class="card">
             <img :src="`src/assets/images/` + src" alt="">
-            <p id="card-title" class="fw-bold fs-secondary-heading">{{ title }}</p>
+            <div class="title-container flex">
+                <p id="card-text" class="fw-bold fs-18 text-primary">{{ title }}</p>
+                <p v-show="date" id="card-text" class="fw-semi-bold fs-13 text-secondary">{{ date }}</p>
+            </div>
         </div>
     </router-link>
 </template>
@@ -17,6 +20,7 @@ export default {
     props: {
         route: { type: String },
         title: { type: String },
+        date: { type: String },
         src: { type: String }
     }
 }
@@ -29,24 +33,34 @@ a {
 
 .card {
     cursor: pointer;
+    margin-bottom: 50px;
 }
 
 .card img {
-    border-radius: 3px;
+    border-radius: 4px;
     width: 100%;
-    height: 350px;
+    height: 325px;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     transition: transform .2s ease;
+
+    -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+
     &:hover {
-        transform: scale(1.09);
-        // box-shadow: 0 0 20px 8px #d0d0d0;
+        transform: scale(1.04);
+        -webkit-box-shadow: 0 16px 24px 2px rgb(0 0 0 / 16%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -7px rgb(0 0 0 / 20%);
+        box-shadow: 0 16px 24px 2px rgb(0 0 0 / 16%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -7px rgb(0 0 0 / 20%);
     }
 }
 
-#card-title {
+.title-container {
+    justify-content: space-around;
+}
+
+#card-text {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
 }
 </style>

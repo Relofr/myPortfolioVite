@@ -1,6 +1,6 @@
 <template>
     <div class="navbar bg-secondary text-accent-100">
-        <div class="container flex">
+        <div class="flex">
             <p class="logo fw-bold">KH</p>
             <nav>
                 <ul role="nav-list">
@@ -8,7 +8,7 @@
                         <RouterLink to="/">Home</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/work">Work</RouterLink>
+                        <RouterLink to="/projects">Projects</RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/about">About</RouterLink>

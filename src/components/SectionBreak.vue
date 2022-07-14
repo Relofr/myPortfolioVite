@@ -1,5 +1,5 @@
 <template>
-    <div class="container sectionBlock fw-bold text-accent fs-32">
+    <div class="sectionBlock fw-bold text-accent fs-32">
         {{ title }}
     </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     display: flex;
     height: 120px;
     background-color: var(--clr-secondary);
-    border-radius: 3px;
+    border-radius: 4px;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;

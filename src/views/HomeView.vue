@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- <Hero /> -->
         <div class="about-me-container">
             <img id="profile-picture" src="../assets/images/ProfilePicture.jpeg" alt="profile picture">
             <div class="about-me-content">
@@ -10,8 +9,8 @@
                 <button @click="downloadResume()" class="button button-primary">Resume</button>
             </div>
         </div>
+        <div class="down-arrow">hi</div>
         <CaseStudiesView />
-        
     </div>
 </template>
 
@@ -44,13 +43,17 @@ export default {
     align-items: center;
     gap: 40px;
     justify-content: center;
-    height: calc(100vh - 110px);
-    position: sticky;
+    height: calc(100vh - 120px);
 }
 
 #profile-picture {
     width: 350px;
-
     border-radius: 50%;
+}
+
+.down-arrow {
+    transform: translateY(-32px);
+    display: flex;
+    justify-content: center;
 }
 </style>

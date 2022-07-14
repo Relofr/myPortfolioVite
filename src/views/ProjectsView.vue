@@ -1,13 +1,20 @@
 <template>
-<div class="container">
     <div>
-        <img src="" >
-        <router-link to="/projects/tracy-aviary">Tracy Aviary</router-link>
+        <CaseStudiesView />
     </div>
-</div>
 </template>
 
 <script>
+import CaseStudiesView from './CaseStudiesView.vue';
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    components: { CaseStudiesView }
+}
 </script>
 
 <style>

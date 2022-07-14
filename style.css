@@ -15,7 +15,9 @@
   --clr-primary: #ffffff;
   --clr-cta: #910011;
   --clr-secondary: #2a3a4a;
+
   --clr-primary-text: rgba(0, 0, 0, 80%);
+  --clr-secondary-text: rgba(0, 0, 0, 50%);
   --clr-accent-text: #ffffff;
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
@@ -74,7 +76,6 @@
     padding: 5px 10px;
     margin: 5px;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 3px
   }
 }
 
@@ -155,6 +156,9 @@ svg {
 
 .text-primary {
   color: var(--clr-primary-text);
+}
+.text-secondary {
+  color: var(--clr-secondary-text);
 }
 
 .text-accent {
@@ -240,7 +244,7 @@ svg {
   color: var(--clr-primary);
   padding: 5px 15px;
   border-style: none;
-  border-radius: 3px;
+  border-radius: 4px;
   text-transform: uppercase;
   margin: 25px 0 0;
 }

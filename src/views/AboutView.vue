@@ -1,5 +1,5 @@
 <template>
-    <div class="container about-view">
+    <div class="about-view">
         <Skills title="My Skills" showIcons/>
     </div>
 </template>

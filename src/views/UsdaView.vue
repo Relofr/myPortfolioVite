@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Section sectionTitle="Tracy Aviary UX/UI Redesign" heroImage="hero-ta.png" />
+        <Section sectionTitle="USDA Redesign" heroImage="hero-usda.png" />
 
         <SectionBreak title="The Process" />
 

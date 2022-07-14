@@ -11,7 +11,7 @@
             </div>
 
             <div v-show="showImage" class="section-container">
-                <img v-show="src" class="hero-image" :src="`src/assets/images/` + src">
+                <img v-show="src" class="section-image" :src="`src/assets/images/` + src">
             </div>
 
         </div>
@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section-container {
     position: relative;
     text-align: center;
@@ -71,7 +71,8 @@ export default {
     transform: translate(-50%, -50%);
     /* border: 1px solid #fff; */
     padding: 10px;
-    /* background-color: rgba(0, 0, 0, .60); */
+    background-color: rgba(0, 0, 0, .60);
+    border-radius: 2px;
 }
 
 .hero-image {
@@ -80,7 +81,7 @@ export default {
     background-position: center;
     object-fit: cover;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .even-columns {
