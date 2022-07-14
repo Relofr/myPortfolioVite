@@ -1,8 +1,9 @@
 <template>
     <div>
         <Section class="about-me-container flex" isReverse showImage src="ProfilePicture.jpeg" sectionTitle="Kyle Hatch"
-            contentOne="Software Engineer + UX/UI designer at LogMeIn" contentTwo="Passionate about bringing my ideas to life and creating a great user experience." button/>
-        <div class="down-arrow">
+            contentOne="Software Engineer + UX/UI designer at LogMeIn"
+            contentTwo="Passionate about bringing my ideas to life and creating a great user experience." button />
+        <div :class="{'visible': visible}" class="down-arrow">
             <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="2xl" bounce></fa>
         </div>
         <div ref="caseStudies">
@@ -21,10 +22,17 @@ import Section from '../components/Section.vue';
 export default {
     data() {
         return {
+            visible: true,
             name: 'Kyle Hatch',
             job: 'Software Engineer + UX/UI designer at LogMeIn',
             bio: 'Passionate about bringing my ideas to life and creating a great user experience.'
         }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         // downloadResume() {
@@ -34,6 +42,13 @@ export default {
             const el = this.$refs[refName]
             if (el) {
                 el.scrollIntoView({ behavior: "smooth" })
+            }
+        },
+        handleScroll(event) {
+            if (window.scrollY < 100) {
+                this.visible = true;
+            } else {
+                this.visible = false;
             }
         }
     },
@@ -47,6 +62,10 @@ export default {
     align-items: center;
     min-height: calc(100vh - 70px);
     justify-content: center;
+}
+
+.visible {
+    visibility: hidden;
 }
 
 .about-me-container img {
