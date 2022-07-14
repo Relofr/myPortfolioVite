@@ -58,6 +58,7 @@ export default {
     margin-top: 15px;
     flex-direction: row;
     align-items: center;
+    width: fit-content;
 }
 
 .button svg {

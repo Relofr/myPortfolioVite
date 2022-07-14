@@ -5,9 +5,12 @@
             <div class="section-title primary-heading fw-bold fs-56">{{ sectionTitle }}</div>
         </div>
         <div class="even-columns" :class="{ 'reverseColumns': isReverse }">
-            <div v-show="contentOne" class="col fw-semi-bold">
+            <div v-show="contentOne" class="col">
                 <p class="fw-bold primary-heading">{{ sectionTitle }}</p>
-                <p>{{ contentOne }}</p>
+                <p class="fw-semi-bold secondary-heading">{{ contentOne }}</p>
+                <p>{{ contentTwo }}</p>
+                <Button v-show="button" @click="downloadResume()" isPrimary text="resume" iconFab="google-drive"
+                    size="lg" />
             </div>
 
             <div v-show="showImage" class="section-container">
@@ -19,9 +22,15 @@
 </template>
 
 <script>
+import Button from './Button.vue'
 export default {
     data() {
         return {};
+    },
+    methods: {
+        downloadResume() {
+            window.open("https://drive.google.com/file/d/1r8OXqJwIf0fBbCHYqIz0P9WEDIuXsjRt/view?usp=sharing")
+        }
     },
     props: {
         heroImage: {
@@ -42,8 +51,9 @@ export default {
         contentTwo: {
             type: String,
         },
-        headingType: {
-            type: String,
+        button: {
+            type: Boolean,
+            required: false
         },
         showImage: {
             type: Boolean,
@@ -54,23 +64,25 @@ export default {
         src: {
             type: String
         }
-    }
+    },
+    components: { Button }
 }
 </script>
 
 <style scoped>
-
-img, picture {
+img,
+picture {
     max-width: 100%;
     display: block;
 }
+
 .col {
     flex-direction: column;
 }
 
 .section-container {
     position: relative;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .section-title {
@@ -78,8 +90,8 @@ img, picture {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border: 1px solid #fff; */
     padding: 10px;
+    text-align: center;
     background-color: rgba(0, 0, 0, .60);
     border-radius: 2px;
     color: var(--primary-color);
@@ -92,6 +104,7 @@ img, picture {
     object-fit: cover;
     text-align: center;
     border-radius: 4px;
+    margin-top: 50px;
 }
 
 .even-columns {
@@ -102,6 +115,9 @@ img, picture {
 
 .even-columns>* {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .reverseColumns {

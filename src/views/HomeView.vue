@@ -1,14 +1,7 @@
 <template>
     <div>
-        <div class="about-me-container">
-            <img id="profile-picture" src="../assets/images/ProfilePicture.jpeg" alt="profile picture">
-            <div class="about-me-content">
-                <p class="primary-heading fw-bold"> {{ name }}</p>
-                <p class="secondary-heading fw-semi-bold">{{ job }}</p>
-                <p>{{ bio }}</p>
-                <Button @click="downloadResume()" isPrimary text="resume" iconFab="google-drive" size="lg"/>
-            </div>
-        </div>
+        <Section class="about-me-container flex" isReverse showImage src="ProfilePicture.jpeg" sectionTitle="Kyle Hatch"
+            contentOne="Software Engineer + UX/UI designer at LogMeIn" contentTwo="Passionate about bringing my ideas to life and creating a great user experience." button/>
         <div class="down-arrow">
             <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="2xl" bounce></fa>
         </div>
@@ -19,9 +12,9 @@
 </template>
 
 <script setup>
-// import Hero from '../components/Hero.vue';
 import CaseStudiesView from './CaseStudiesView.vue';
 import Button from '../components/Button.vue';
+import Section from '../components/Section.vue';
 </script>
 
 <script>
@@ -34,9 +27,9 @@ export default {
         }
     },
     methods: {
-        downloadResume() {
-            window.open("https://drive.google.com/file/d/1r8OXqJwIf0fBbCHYqIz0P9WEDIuXsjRt/view?usp=sharing")
-        },
+        // downloadResume() {
+        //     window.open("https://drive.google.com/file/d/1r8OXqJwIf0fBbCHYqIz0P9WEDIuXsjRt/view?usp=sharing")
+        // },
         scrollToElement(refName) {
             const el = this.$refs[refName]
             if (el) {
@@ -44,29 +37,39 @@ export default {
             }
         }
     },
-    components: { Button }
+    components: { Section, Button }
 }
 </script>
 
 <style lang="less">
 .about-me-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 40px;
+    min-height: calc(100vh - 70px);
     justify-content: center;
-    height: calc(100vh - 70px);
 }
 
-#profile-picture {
+.about-me-container img {
     width: 350px;
     border-radius: 50%;
 }
+
+// .about-me-content {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+// }
+
+// #profile-picture {
+//     width: 350px;
+//     border-radius: 50%;
+// }
 
 .down-arrow {
     transform: translateY(-50px);
     display: flex;
     justify-content: center;
+
     & svg {
         cursor: pointer;
     }
