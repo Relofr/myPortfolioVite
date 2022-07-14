@@ -3,8 +3,8 @@
         <div class="card">
             <img :src="`src/assets/images/` + src" alt="">
             <div class="title-container flex">
-                <p id="card-text" class="fw-bold fs-18 text-primary">{{ title }}</p>
-                <p v-show="date" id="card-text" class="fw-semi-bold fs-13 text-secondary">{{ date }}</p>
+                <p id="card-text" class="fw-bold fs-16 primary-text">{{ title }}</p>
+                <p v-show="date" id="card-text" class="fw-semi-bold fs-16 secondary-text">{{ date }}</p>
             </div>
         </div>
     </router-link>
@@ -27,9 +27,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-a {
-    color: var(--clr-primary-text);
-}
 
 .card {
     cursor: pointer;
@@ -58,9 +55,7 @@ a {
     justify-content: space-around;
 }
 
-#card-text {
+.title-container p {
     display: flex;
-    justify-content: space-between;
-    text-align: center;
 }
 </style>

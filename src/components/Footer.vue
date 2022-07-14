@@ -1,11 +1,17 @@
 <template>
     <footer>
-        <div class="footer bg-secondary text-accent-100">
+        <div class="footer bg-secondary">
             <div class="flex">
                 <div class="social-icons">
-                    <a href="https://github.com/Relofr" target="_blank"><fa :icon="[ 'fab', 'github' ]"></fa></a>
-                    <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><fa :icon="[ 'fab', 'linkedin' ]"></fa></a>
-                    <a href="mailto:ky13h4tch@gmail.com" target="_blank"><fa icon="envelope"></fa></a>
+                    <a href="https://github.com/Relofr" target="_blank">
+                        <fa :icon="['fab', 'github']"></fa>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank">
+                        <fa :icon="['fab', 'linkedin']"></fa>
+                    </a>
+                    <a href="mailto:ky13h4tch@gmail.com" target="_blank">
+                        <fa icon="envelope"></fa>
+                    </a>
                 </div>
                 <nav>
                     <ul role="nav-list">
@@ -35,23 +41,30 @@
 
 <style>
 .footer {
-    position: relative;
-    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 200px;
+    font-size: var(--fs-13);
 }
 
-a {
-    color: var(--clr-primary);
-    font-size: var(--fs-nav);
+.footer a {
+    color: var(--primary-color);
+    font-size: var(--fs-16);
+}
+
+.footer p {
+    color: var(--primary-color);
+    font-size: var(--fs-16);
 }
 
 .footer .flex {
     flex-direction: column;
-    justify-content: space-evenly;
 }
 
 .footer ul {
     display: flex;
+    padding: 20px 0;
 }
 
 .footer a {

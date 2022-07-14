@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p id="case-studies-title" class="flex fw-bold fs-primary-heading">Projects</p>
+        <p id="case-studies-title" class="flex fw-bold primary-heading">Projects</p>
         <div class="flex-grid-thirds">
             <div class="col">
                 <Card title="Tracy Aviary UX/UI" date="July 13th, 2022" src="hero-ta.png" route="tracy-aviary" />

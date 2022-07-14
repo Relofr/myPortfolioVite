@@ -1,24 +1,22 @@
 <template>
-    <div class="navbar bg-secondary text-accent-100">
-        <div class="flex">
-            <p class="logo fw-bold">KH</p>
-            <nav>
-                <ul role="nav-list">
-                    <li>
-                        <RouterLink to="/">Home</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/projects">Projects</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/about">About</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/contact">Contact</RouterLink>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    <div class="main-nav bg-secondary">
+        <p class="logo fw-bold">KH</p>
+        <nav>
+            <ul role="nav-list">
+                <li>
+                    <RouterLink to="/">Home</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/projects">Projects</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/about">About</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/contact">Contact</RouterLink>
+                </li>
+            </ul>
+        </nav>
     </div>
 </template>
 
@@ -31,40 +29,34 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-    height: 70px;
-    width: 100%;
-    position: relative;
-}
-
-a .navbar {
-    color: var(--clr-primary);
-    font-size: var(--fs-nav);
-}
-
-.navbar .flex {
-    padding: 0 40px;
+.main-nav {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: 70px;
+    padding: 20px 10%;
+    font-size: var(--fs-13);
 }
 
-.navbar ul {
+.main-nav ul {
     display: flex;
 }
 
-.navbar a {
-    margin: 10px;
+.main-nav ul li {
+    padding: 0 20px;
 }
 
-/* .navbar a:hover {
-    border-bottom: 2px #fff solid;
-} */
+.main-nav a {
+    color: var(--primary-color);
+    font-size: var(--fs-13);
+}
 
 .logo {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--clr-primary);
-    color: var(--clr-secondary);
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,11 +3,10 @@
         <div class="about-me-container">
             <img id="profile-picture" src="../assets/images/ProfilePicture.jpeg" alt="profile picture">
             <div class="about-me-content">
-                <p class="fs-primary-heading fw-bold"> {{ name }}</p>
-                <p class="fs-secondary-heading fw-semi-bold">{{ job }}</p>
+                <p class="primary-heading fw-bold"> {{ name }}</p>
+                <p class="secondary-heading fw-semi-bold">{{ job }}</p>
                 <p>{{ bio }}</p>
-                <button @click="downloadResume()" class="button button-primary">Resume <fa icon="file" size="lg"></fa>
-                </button>
+                <Button @click="downloadResume()" isPrimary text="resume" iconFab="google-drive" size="lg"/>
             </div>
         </div>
         <div class="down-arrow">
@@ -22,6 +21,7 @@
 <script setup>
 // import Hero from '../components/Hero.vue';
 import CaseStudiesView from './CaseStudiesView.vue';
+import Button from '../components/Button.vue';
 </script>
 
 <script>
@@ -43,7 +43,8 @@ export default {
                 el.scrollIntoView({ behavior: "smooth" })
             }
         }
-    }
+    },
+    components: { Button }
 }
 </script>
 
@@ -54,7 +55,7 @@ export default {
     align-items: center;
     gap: 40px;
     justify-content: center;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 70px);
 }
 
 #profile-picture {
@@ -63,10 +64,9 @@ export default {
 }
 
 .down-arrow {
-    transform: translateY(-20px);
+    transform: translateY(-50px);
     display: flex;
     justify-content: center;
-
     & svg {
         cursor: pointer;
     }

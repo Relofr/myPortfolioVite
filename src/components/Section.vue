@@ -2,11 +2,11 @@
     <div class="section-container">
         <div v-show="heroImage" class="section-container">
             <img class="hero-image" :src="`src/assets/images/` + heroImage">
-            <div class="section-title fw-bold fs-56 text-accent">{{ sectionTitle }}</div>
+            <div class="section-title primary-heading fw-bold fs-56">{{ sectionTitle }}</div>
         </div>
         <div class="even-columns" :class="{ 'reverseColumns': isReverse }">
             <div v-show="contentOne" class="col fw-semi-bold">
-                <p class="fw-bold fs-primary-heading">{{ sectionTitle }}</p>
+                <p class="fw-bold primary-heading">{{ sectionTitle }}</p>
                 <p>{{ contentOne }}</p>
             </div>
 
@@ -59,6 +59,15 @@ export default {
 </script>
 
 <style scoped>
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+.col {
+    flex-direction: column;
+}
+
 .section-container {
     position: relative;
     text-align: center;
@@ -73,6 +82,7 @@ export default {
     padding: 10px;
     background-color: rgba(0, 0, 0, .60);
     border-radius: 2px;
+    color: var(--primary-color);
 }
 
 .hero-image {

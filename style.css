@@ -1,29 +1,14 @@
 :root {
-  /* --mainColor: #ffffff;
-  --secondaryColor: #910011;
+  --primary-color: #ffffff;
+  --secondary-color: #910011;
 
-  --borderColor: #2a3a4a;
+  --primary-text-color: rgba(0, 0, 0, 80%);
+  --secondary-text-color: #4b5156;
 
-  --mainText: rgba(0, 0, 0, 80%);
-  --secondaryText: #4b5156;
+  --primary-background-color: #fff;
+  --secondary-background-color: #2a3a4a;
 
-  --fw-regular: 400;
-  --fw-semi-bold: 500;
-  --fw-bold: 700; */
-
-
-  --clr-primary: #ffffff;
-  --clr-cta: #910011;
-  --clr-secondary: #2a3a4a;
-
-  --clr-primary-text: rgba(0, 0, 0, 80%);
-  --clr-secondary-text: rgba(0, 0, 0, 50%);
-  --clr-accent-text: #ffffff;
-
-  --ff-primary: "Be Vietnam Pro", sans-serif;
-
-  --ff-body: var(--ff-primary);
-  --ff-heading: var(--ff-primary);
+  --border-color: #2a3a4a;
 
   --fw-regular: 400;
   --fw-semi-bold: 500;
@@ -36,154 +21,70 @@
   --fs-40: 2.5rem;
   --fs-56: 3.5rem;
 
-  --fs-body: var(--fs-16);
-  --fs-primary-heading: var(--fs-32);
-  --fs-secondary-heading: var(--fs-18);
-  --fs-nav: var(--fs-16);
-  --fs-button: var(--fs-16);
+  --primary-heading: var(--fs-32);
+  --secondary-heading: var(--fs-18);
 }
 
-/* Tablets and under  */
-@media (max-width: 768px) {
-  .about-me-container {
-    flex-wrap: wrap;
-    align-content: center;
-  }
-}
-
-/* Mobile  */
-@media (max-width: 500px) {
-
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 15px !important;
-  }
-
-  .sectionBlock {
-    font-size: var(--fs-18) !important;
-  }
-
-  .navbar .flex {
-    display: flex;
-    justify-content: center !important;
-  }
-
-  .logo {
-    display: none !important;
-  }
-
-  .navbar ul {
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul,
-ol,
-li {
-  list-style-type: none;
-}
-
-a {
-  color: red;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-html,
 body {
-  height: 100vh;
-  font-family: var(--ff-primary);
-  color: var(--clr-primary-text);
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  text-rendering: optimizeSpeed;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background: #fff;
+  color: var(--primary-text-color);
+  font-size: var(--fs-16);
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
 a {
-  text-decoration-skip-ink: auto;
   text-decoration: none;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
+ul {
+  list-style: none;
 }
 
-/* .svg-inline--fa {
-  width: 32px;
-  height: 32px;
-} */
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* Utility classes */
-
-.text-primary {
-  color: var(--clr-primary-text);
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.text-secondary {
-  color: var(--clr-secondary-text);
+/* Utility */
+
+.primary-heading {
+  font-size: var(--primary-heading);
+  margin-bottom: 15px;
 }
 
-.text-accent {
-  color: var(--clr-accent-text);
+.secondary-heading {
+  font-size: var(--secondary-heading);
+  margin-bottom: 15px;
 }
-
-.text-accent-100 {
-  color: var(--clr-primary);
-}
-
-
 
 .bg-primary {
-  background-color: var(--clr-primary);
+  background-color: var(--primary-background-color);
 }
 
 .bg-secondary {
-  background-color: var(--clr-secondary);
+  background-color: var(--secondary-background-color);
+}
+
+.primary-text {
+  color: var(--primary-text-color);
+}
+
+.secondary-text {
+  color: var(--secondary-text-color);
 }
 
 .fw-bold {
@@ -196,16 +97,6 @@ picture {
 
 .fw-regular {
   font-weight: var(--fw-regular);
-}
-
-.fs-primary-heading {
-  font-size: var(--fs-primary-heading);
-  margin-bottom: 25px;
-}
-
-.fs-secondary-heading {
-  font-size: var(--fs-secondary-heading);
-  margin-bottom: 25px;
 }
 
 .fs-14 {
@@ -230,37 +121,4 @@ picture {
 
 .fs-56 {
   font-size: var(--fs-56);
-}
-
-
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  flex-wrap: wrap;
-}
-
-.button-primary {
-  background-color: var(--clr-cta);
-  display: flex;
-  color: var(--clr-primary);
-  padding: 5px 15px;
-  gap: 10px;
-  border-style: none;
-  border-radius: 3px;
-  text-transform: uppercase;
-  margin: 25px 0 0;
-  align-items: center;
-  flex-direction: row;
-}
-
-.button-primary:hover {
-  cursor: pointer;
-  background-color: rgba(145, 0, 17, 80%)
 }

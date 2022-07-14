@@ -1,5 +1,5 @@
 <template>
-    <div class="sectionBlock fw-bold text-accent fs-32">
+    <div class="sectionBlock bg-secondary fw-bold fs-32">
         {{ title }}
     </div>
 </template>
@@ -17,9 +17,9 @@ export default {
 
 <style>
 .sectionBlock {
+    color: var(--primary-color);
     display: flex;
     height: 120px;
-    background-color: var(--clr-secondary);
     border-radius: 4px;
     align-items: center;
     justify-content: center;

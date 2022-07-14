@@ -1,6 +1,6 @@
 <template>
     <div class="skills-container flex">
-        <div class="fw-bold fs-primary-heading">{{ title }}</div>
+        <div class="fw-bold primary-heading">{{ title }}</div>
         <div class="icons-wrapper">
             <div class="skills-icons" v-for="(key, value) in skills" :key="value">
                 <Tooltip :text="value">
@@ -34,7 +34,7 @@ export default {
     flex-direction: column;
 }
 
-.skills-icons {
+#icon-image {
     width: 64px;
 }
 
