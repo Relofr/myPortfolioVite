@@ -48,6 +48,10 @@ ul {
   list-style: none;
 }
 
+p {
+  padding: 10px 0
+}
+
 .container {
   width: 90%;
   max-width: 1100px;
@@ -65,11 +69,12 @@ ul {
 .primary-heading {
   font-size: var(--primary-heading);
   margin-bottom: 15px;
+  color: var(--secondary-color);
 }
 
 .secondary-heading {
   font-size: var(--secondary-heading);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .bg-primary {

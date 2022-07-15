@@ -9,10 +9,13 @@
                 <Card title="USDA Redesign" date="April 16th, 2022" src="hero-usda.png" route="usda" />
             </div>
             <div class="col">
-                <Card title="DailyUI" src="hero-dailyui.png" route="daily-ui" />
+                <Card title="ReClaim App" src="hero-reclaim.png" route="reclaim" />
             </div>
             <div class="col">
-                <Card title="ReClaim App" src="hero-reclaim.png" route="reclaim" />
+                <Card title="UX/UI Portfolio" src="hero-portfolio.png" route="portfolio" />
+            </div>
+            <div class="col">
+                <Card title="DailyUI" src="hero-dailyui.png" route="daily-ui" />
             </div>
         </div>
     </div>

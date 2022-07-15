@@ -66,7 +66,7 @@ export default {
 }
 
 .button-primary {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-background-color);
     color: var(--primary-color);
 }
 

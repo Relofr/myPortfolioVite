@@ -37,7 +37,7 @@ export default {
     border-radius: 4px;
     width: 100%;
     max-width: 487.5px;
-    height: 325px;
+    height: 275px;
     object-fit: cover;
     margin-bottom: 25px;
     transition: transform .2s ease;

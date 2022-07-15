@@ -104,7 +104,7 @@ picture {
     object-fit: cover;
     text-align: center;
     border-radius: 4px;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .even-columns {

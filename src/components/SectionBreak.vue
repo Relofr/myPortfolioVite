@@ -24,7 +24,7 @@ export default {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    margin: 80px 0px;
+    margin: 50px 0px;
     text-align: center;
 }
 </style>
