@@ -1,21 +1,21 @@
 <template>
     <div>
-        <p id="case-studies-title" class="flex fw-bold primary-heading">Projects</p>
+        <p data-aos="fade-up" data-aos-delay="75" id="case-studies-title" class="flex fw-bold primary-heading">Projects</p>
         <div class="flex-grid-thirds">
             <div class="col">
-                <Card title="Tracy Aviary UX/UI" date="July 13th, 2022" src="hero-ta.png" route="tracy-aviary" />
+                <Card title="Tracy Aviary UX/UI" date="July 13th, 2022" src="/tracyaviary/hero-ta.png" route="tracy-aviary" />
             </div>
             <div class="col">
-                <Card title="USDA Redesign" date="April 16th, 2022" src="hero-usda.png" route="usda" />
+                <Card title="USDA Redesign" date="April 16th, 2022" src="/usda/hero-usda.png" route="usda" />
             </div>
             <div class="col">
-                <Card title="ReClaim App" src="hero-reclaim.png" route="reclaim" />
+                <Card title="ReClaim App" src="/reclaim/hero-reclaim.png" route="reclaim" />
             </div>
             <div class="col">
-                <Card title="UX/UI Portfolio" src="hero-portfolio.png" route="portfolio" />
+                <Card title="UX/UI Portfolio" src="/portfolio/hero-portfolio.png" route="portfolio" />
             </div>
             <div class="col">
-                <Card title="DailyUI" src="hero-dailyui.png" route="daily-ui" />
+                <Card title="DailyUI" src="/dailyui/hero-dailyui.png" route="daily-ui" />
             </div>
         </div>
     </div>

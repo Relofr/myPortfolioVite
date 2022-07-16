@@ -1,6 +1,6 @@
 <template>
     <router-link :to="`/` + route">
-        <div class="card">
+        <div data-aos="fade-up" data-aos-delay="75" class="card">
             <img :src="`src/assets/images/` + src" alt="">
             <div class="title-container flex">
                 <p id="card-text" class="fw-bold fs-16 primary-text">{{ title }}</p>

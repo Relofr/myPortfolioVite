@@ -1,5 +1,5 @@
 <template>
-    <div class="overview">
+    <div data-aos="fade-up" data-aos-delay="75" class="overview">
         <div class="overview-text">
             <span class="primary-heading fw-bold">Project Overview</span>
             <p>{{ about }}</p>
@@ -29,13 +29,13 @@
             </div>
         </div>
         <div class="problem-text">
-            <span class="secondary-heading fw-bold">The Problem</span>
+            <span class="secondary-heading fw-bold">Exploring the problem</span>
             <p>{{ problem }}</p>
             <span class="secondary-heading fw-bold">The Solution</span>
             <p>{{ solution }}</p>
         </div>
     </div>
-</template>
+</template> 
 
 <script>
 export default {

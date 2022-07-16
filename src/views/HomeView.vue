@@ -3,7 +3,7 @@
         <Section class="about-me-container flex" isReverse showImage src="ProfilePicture.jpeg" sectionTitle="Kyle Hatch"
             contentOne="Software Engineer + UX/UI designer at LogMeIn"
             contentTwo="Passionate about bringing my ideas to life and creating a great user experience." button />
-        <div :class="{'visible': !visible}" class="down-arrow">
+        <div :class="{ 'visible': !visible }" class="down-arrow">
             <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="2xl" bounce></fa>
         </div>
         <div ref="caseStudies">
@@ -35,9 +35,6 @@ export default {
         window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
-        // downloadResume() {
-        //     window.open("https://drive.google.com/file/d/1r8OXqJwIf0fBbCHYqIz0P9WEDIuXsjRt/view?usp=sharing")
-        // },
         scrollToElement(refName) {
             const el = this.$refs[refName]
             if (el) {
@@ -45,11 +42,12 @@ export default {
             }
         },
         handleScroll(event) {
-            if (window.scrollY < 100) {
+            if (window.scrollY < 200) {
                 this.visible = true;
             } else {
                 this.visible = false;
             }
+            console.log(window.scrollY);
         }
     },
     components: { Section, Button }
@@ -59,9 +57,12 @@ export default {
 <style lang="less">
 .about-me-container {
     display: flex;
-    align-items: center;
     min-height: calc(100vh - 70px);
-    justify-content: center;
+    align-content: center;
+}
+
+.about-me-container .col {
+    justify-content: flex-start;
 }
 
 .visible {
@@ -85,7 +86,7 @@ export default {
 // }
 
 .down-arrow {
-    transform: translateY(-50px);
+    transform: translateY(-100px);
     display: flex;
     justify-content: center;
 

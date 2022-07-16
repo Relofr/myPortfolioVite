@@ -1,13 +1,13 @@
 <template>
-    <div class="section-container">
+    <div data-aos="fade-up" data-aos-delay="75" class="section-container">
         <div v-show="heroImage" class="section-container">
             <img class="hero-image" :src="`src/assets/images/` + heroImage">
             <div class="section-title primary-heading fw-bold fs-56">{{ sectionTitle }}</div>
         </div>
         <div class="even-columns" :class="{ 'reverseColumns': isReverse }">
             <div v-show="contentOne" class="col">
-                <p class="fw-bold primary-heading">{{ sectionTitle }}</p>
-                <p class="fw-semi-bold secondary-heading">{{ contentOne }}</p>
+                <span class="fw-bold primary-heading">{{ sectionTitle }}</span>
+                <p>{{ contentOne }}</p>
                 <p>{{ contentTwo }}</p>
                 <Button v-show="button" @click="downloadResume()" isPrimary text="resume" iconFab="google-drive"
                     size="lg" />
@@ -82,7 +82,7 @@ picture {
 
 .section-container {
     position: relative;
-    /* text-align: center; */
+    margin-bottom: 50px;
 }
 
 .section-title {
@@ -110,6 +110,7 @@ picture {
 .even-columns {
     display: flex;
     align-items: center;
+    text-align: left;
     gap: 1em;
 }
 
@@ -122,6 +123,13 @@ picture {
 
 .reverseColumns {
     flex-direction: row-reverse;
+    .col {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.reverseColumns .col {
 }
 
 @media (max-width: 800px) {

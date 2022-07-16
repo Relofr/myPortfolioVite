@@ -4,16 +4,16 @@
         <nav>
             <ul role="nav-list">
                 <li>
-                    <RouterLink to="/">Home</RouterLink>
+                    <RouterLink to="/"><fa icon="home" size="lg"></fa>Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/projects">Projects</RouterLink>
+                    <RouterLink to="/projects"><fa icon="folder-tree" size="lg"></fa>Projects</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/about">About</RouterLink>
+                    <RouterLink to="/about"><fa icon="gamepad" size="lg"></fa>About</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/contact">Contact</RouterLink>
+                    <RouterLink to="/contact"><fa icon="comments" size="lg"></fa>Contact</RouterLink>
                 </li>
             </ul>
         </nav>
@@ -44,6 +44,10 @@ export default {
 
 .main-nav ul li {
     padding: 0 20px;
+}
+
+.main-nav svg {
+    padding: 0 8px;
 }
 
 .main-nav a {

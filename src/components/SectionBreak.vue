@@ -1,5 +1,5 @@
 <template>
-    <div class="sectionBlock bg-secondary fw-bold fs-32">
+    <div data-aos="fade-up" data-aos-delay="75" class="sectionBlock bg-secondary fw-bold fs-32">
         {{ title }}
     </div>
 </template>

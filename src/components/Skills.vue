@@ -1,5 +1,5 @@
 <template>
-    <div class="skills-container flex">
+    <div data-aos="fade-up" data-aos-delay="75" class="skills-container flex">
         <div class="fw-bold primary-heading">{{ title }}</div>
         <div class="icons-wrapper">
             <div class="skills-icons" v-for="(key, value) in skills" :key="value">

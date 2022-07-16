@@ -1,6 +1,7 @@
 <template>
     <div>
-        <Section sectionTitle="Tracy Aviary UX/UI Redesign" heroImage="hero-ta.png" />
+        <Section sectionTitle="Tracy Aviary UX/UI Redesign" heroImage="/tracyaviary/hero-ta.png" />
+
         <Overview
             about="Tracy Aviary inspires curiosity and caring for birds and nature through education and conservation."
             description="Our goal was to focus on the user path for both donations and daily admissions. In addition, we wanted to emphasize across the site that yearly memberships come with great benefits and should be considered."
@@ -11,15 +12,23 @@
 " />
         <SectionBreak title="UI Analysis & User Research" />
 
-        <Section src="ta-desktop.png" isReverse showImage sectionTitle="Donation Flow High Fidelity - Desktop"
-            contentOne="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." />
+        <Section src="/tracyaviary/ta-desktop.png" showImage sectionTitle="Where to begin"
+            contentOne="At first glance, the site looks properly taken care of." contentTwo="There are some obvious UX/UI changes that need to be made, but without knowing exactly what we needed to fix, we decided to create a survey to find out more." />
+        <Section showImage src="/tracyaviary/survey-pie.png" sectionTitle="Survey Data"
+            contentOne="We created a survey that went over how often they visit the aviary, why they visit, how their experience was, how they purchased tickets, and if they have ever donated." />
+        <Section showImage src="/tracyaviary/prioritization-matrix.png" sectionTitle=""
+        contentOne="Based on the survey results, I decided to focus on the ticket purchases and donation flow of the website, which ended up needing an update." />
+        <Section showImage src="/tracyaviary/prioritization-matrix.png" sectionTitle="User Interviews"
+        contentOne="" />
 
-        <Section showImage sectionTitle="Donation Flow High Fidelity - Desktop"
-            contentOne="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gal" />
+        <Section showImage src="/tracyaviary/" sectionTitle="User Interviews"
+        contentOne="Hello" contentTwo=""/>
 
-        <SectionBreak title="Wireframes" />
-        <SectionBreak title="Design" />
-        <SectionBreak title="wrapping up & future plans" />
+        <SectionBreak title="Definition" />
+        <SectionBreak title="Ideation" />
+        <SectionBreak title="Prototyping" />
+        <SectionBreak title="Testing" />
+        <SectionBreak title="Conclusion" />
     </div>
 </template>
 
