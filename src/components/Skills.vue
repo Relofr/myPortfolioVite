@@ -32,6 +32,7 @@ export default {
 .skills-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 #icon-image {
@@ -40,7 +41,6 @@ export default {
 
 .icons-wrapper {
     display: flex;
-    flex-direction: row;
     gap: 35px;
     flex-wrap: wrap;
     margin: 25px 0 0;

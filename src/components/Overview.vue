@@ -1,38 +1,42 @@
 <template>
     <div data-aos="fade-up" data-aos-delay="75" class="overview">
         <div class="overview-text">
-            <span class="primary-heading fw-bold">Project Overview</span>
-            <p>{{ about }}</p>
-            <p>{{ description }}</p>
+            <span v-show="title" class="primary-heading fw-bold">{{ title }}</span>
+            <p v-show="about">{{ about }}</p>
+            <p v-show="description">{{ description }}</p>
+            <p v-show="descriptionTwo">{{ descriptionTwo }}</p>
         </div>
         <div class="even-columns">
             <div class="col">
-                <span class="fw-bold secondary-heading">
+                <span v-show="role" class="fw-bold secondary-heading">
                     Role<p class="fw-regular">{{ role }}</p>
                 </span>
 
-                <span class="fw-bold secondary-heading">
+                <span v-show="date" class="fw-bold secondary-heading">
                     Date
                 <p class="fw-regular">{{ date }}</p>
                 </span>
             </div>
             <div class="col">
-                <span class="fw-bold secondary-heading">
+                <span v-show="team" class="fw-bold secondary-heading">
                 Team
                 <p class="fw-regular">{{ team }}</p>
                 </span>
 
-                <span class="fw-bold secondary-heading">
+                <span v-show="tools" class="fw-bold secondary-heading">
                     Tools
                 <p class="fw-regular">{{ tools }}</p>
                 </span>
             </div>
         </div>
         <div class="problem-text">
-            <span class="secondary-heading fw-bold">Exploring the problem</span>
-            <p>{{ problem }}</p>
-            <span class="secondary-heading fw-bold">The Solution</span>
-            <p>{{ solution }}</p>
+            <span v-show="problem" class="secondary-heading fw-bold">Exploring the problem
+                <p class="fw-regular">{{ problem }}</p>
+            </span>
+            <span v-show="solution" class="secondary-heading fw-bold">The Solution
+                <p class="fw-regular">{{ solution }}</p>
+            </span>
+            
         </div>
     </div>
 </template> 
@@ -45,37 +49,35 @@ export default {
         }
     },
     props: {
+        title: {
+            type: String
+        },
         about: {
             type: String,
-            required: true
         },
         description: {
             type: String,
-            required: false
+        },
+        descriptionTwo: {
+            type: String,
         },
         role: {
             type: String,
-            required: true
         },
         date: {
             type: String,
-            required: true
         },
         team: {
             type: String,
-            required: true
         },
         tools: {
             type: String,
-            required: true
         },
         problem: {
             type: String,
-            required: true
         },
         solution: {
             type: String,
-            required: true
         }
     }
 }

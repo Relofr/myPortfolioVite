@@ -1,10 +1,10 @@
 <template>
-    <div data-aos="fade-up" data-aos-delay="75" class="section-container">
-        <div v-show="heroImage" class="section-container">
+    <div data-aos="fade-up" data-aos-delay="75">
+        <div v-show="heroImage" class="hero-container">
             <img class="hero-image" :src="`src/assets/images/` + heroImage">
             <div class="section-title primary-heading fw-bold fs-56">{{ sectionTitle }}</div>
         </div>
-        <div class="even-columns" :class="{ 'reverseColumns': isReverse }">
+        <div class="even-columns section-container" :class="{ 'reverseColumns': isReverse }">
             <div v-show="contentOne" class="col">
                 <span class="fw-bold primary-heading">{{ sectionTitle }}</span>
                 <p>{{ contentOne }}</p>
@@ -13,7 +13,7 @@
                     size="lg" />
             </div>
 
-            <div v-show="showImage" class="section-container">
+            <div v-show="showImage">
                 <img v-show="src" class="section-image" :src="`src/assets/images/` + src">
             </div>
 
@@ -80,10 +80,15 @@ picture {
     flex-direction: column;
 }
 
+.hero-container {
+    position: relative;
+}
+
 .section-container {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
+
 
 .section-title {
     position: absolute;
@@ -104,7 +109,7 @@ picture {
     object-fit: cover;
     text-align: center;
     border-radius: 4px;
-    margin: 50px 0;
+    margin: 50px 0 0;
 }
 
 .even-columns {
@@ -123,25 +128,26 @@ picture {
 
 .reverseColumns {
     flex-direction: row-reverse;
+
     .col {
         align-items: flex-start;
         text-align: left;
     }
 }
 
-.reverseColumns .col {
-}
+.reverseColumns .col {}
 
 @media (max-width: 800px) {
     .even-columns {
         display: flex;
         flex-direction: column-reverse;
     }
+
     .even-columns>* {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 </style>
