@@ -1,6 +1,6 @@
 <template>
     <div data-aos="fade-up" data-aos-delay="75" class="skills-container flex">
-        <div class="fw-bold primary-heading">{{ title }}</div>
+        <div class="primary-heading">{{ title }}</div>
         <div class="icons-wrapper">
             <div class="skills-icons" v-for="(key, value) in skills" :key="value">
                 <Tooltip :text="value">
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .skills-container {
     display: flex;
     flex-direction: column;
@@ -44,5 +44,13 @@ export default {
     gap: 35px;
     flex-wrap: wrap;
     margin: 25px 0 0;
+}
+
+img {
+    transition: transform .2s ease;
+}
+
+img:hover {
+    transform: scale(1.2);
 }
 </style>

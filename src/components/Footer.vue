@@ -40,6 +40,9 @@
 </script>
 
 <style>
+footer {
+    flex-shrink: 0;
+}
 .footer {
     display: flex;
     align-items: center;

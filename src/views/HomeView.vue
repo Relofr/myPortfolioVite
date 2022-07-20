@@ -1,13 +1,13 @@
 <template>
     <div>
-        <Section class="about-me-container flex" isReverse showImage src="ProfilePicture.jpeg" sectionTitle="Kyle Hatch"
+        <Section class="about-me-container" isReverse showImage src="ProfilePicture.jpeg" sectionTitle="Kyle Hatch"
             contentOne="Software Engineer + UX/UI designer at LogMeIn"
             contentTwo="Passionate about bringing my ideas to life and creating a great user experience." button />
         <div :class="{ 'visible': !visible }" class="down-arrow">
             <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="2xl" bounce></fa>
         </div>
         <div ref="caseStudies">
-            <CaseStudiesView />
+            <CaseStudiesView class="case-studies-container"/>
         </div>
     </div>
 </template>
@@ -57,8 +57,12 @@ export default {
 <style lang="less">
 .about-me-container {
     display: flex;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 120px);
     align-content: center;
+}
+
+.case-studies-container {
+    height: 100vh;
 }
 
 .about-me-container .col {
@@ -86,7 +90,7 @@ export default {
 // }
 
 .down-arrow {
-    transform: translateY(-100px);
+    transform: translateY(-50px);
     display: flex;
     justify-content: center;
 

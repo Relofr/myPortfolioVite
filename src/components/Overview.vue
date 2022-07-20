@@ -1,39 +1,39 @@
 <template>
     <div data-aos="fade-up" data-aos-delay="75" class="overview">
-        <div class="overview-text">
-            <span v-show="title" class="primary-heading fw-bold">{{ title }}</span>
+        <div>
+            <span v-show="title" class="primary-heading">{{ title }}</span>
             <p v-show="about">{{ about }}</p>
             <p v-show="description">{{ description }}</p>
             <p v-show="descriptionTwo">{{ descriptionTwo }}</p>
         </div>
         <div class="even-columns">
             <div class="col">
-                <span v-show="role" class="fw-bold secondary-heading">
+                <span v-show="role" class="secondary-heading">
                     Role<p class="fw-regular">{{ role }}</p>
                 </span>
 
-                <span v-show="date" class="fw-bold secondary-heading">
+                <span v-show="date" class="secondary-heading">
                     Date
                 <p class="fw-regular">{{ date }}</p>
                 </span>
             </div>
             <div class="col">
-                <span v-show="team" class="fw-bold secondary-heading">
+                <span v-show="team" class="secondary-heading">
                 Team
                 <p class="fw-regular">{{ team }}</p>
                 </span>
 
-                <span v-show="tools" class="fw-bold secondary-heading">
+                <span v-show="tools" class="secondary-heading">
                     Tools
                 <p class="fw-regular">{{ tools }}</p>
                 </span>
             </div>
         </div>
         <div class="problem-text">
-            <span v-show="problem" class="secondary-heading fw-bold">Exploring the problem
+            <span v-show="problem" class="secondary-heading">Exploring the problem
                 <p class="fw-regular">{{ problem }}</p>
             </span>
-            <span v-show="solution" class="secondary-heading fw-bold">The Solution
+            <span v-show="solution" class="secondary-heading">The Solution
                 <p class="fw-regular">{{ solution }}</p>
             </span>
             

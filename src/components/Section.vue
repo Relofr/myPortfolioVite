@@ -2,11 +2,11 @@
     <div data-aos="fade-up" data-aos-delay="75">
         <div v-show="heroImage" class="hero-container">
             <img class="hero-image" :src="`src/assets/images/` + heroImage">
-            <div class="section-title primary-heading fw-bold fs-56">{{ sectionTitle }}</div>
+            <div v-show="sectionTitle" class="section-title primary-heading fs-56">{{ sectionTitle }}</div>
         </div>
         <div class="even-columns section-container" :class="{ 'reverseColumns': isReverse }">
             <div v-show="contentOne" class="col">
-                <span class="fw-bold primary-heading">{{ sectionTitle }}</span>
+                <span class=" primary-heading">{{ sectionTitle }}</span>
                 <p>{{ contentOne }}</p>
                 <p>{{ contentTwo }}</p>
                 <Button v-show="button" @click="downloadResume()" isPrimary text="resume" iconFab="google-drive"
@@ -109,7 +109,6 @@ picture {
     object-fit: cover;
     text-align: center;
     border-radius: 4px;
-    margin: 50px 0 0;
 }
 
 .even-columns {

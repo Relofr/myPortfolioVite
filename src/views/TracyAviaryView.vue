@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="ta">
         <Section sectionTitle="Tracy Aviary UX/UI Redesign" heroImage="/tracyaviary/hero-ta.png" />
 
         <Overview
