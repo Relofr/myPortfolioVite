@@ -4,7 +4,7 @@
             contentOne="Software Engineer + UX/UI designer at LogMeIn"
             contentTwo="Passionate about bringing my ideas to life and creating a great user experience." button />
         <div :class="{ 'visible': !visible }" class="down-arrow">
-            <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="2xl" bounce></fa>
+            <fa @click="scrollToElement('caseStudies')" icon="fa-angle-down" size="xl" bounce></fa>
         </div>
         <div ref="caseStudies">
             <CaseStudiesView class="case-studies-container"/>

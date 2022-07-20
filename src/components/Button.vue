@@ -52,7 +52,7 @@ export default {
     border: 0;
     font-weight: var(--fw-bold);
     padding: 10px 20px;
-    font-size: var(--fs-16);
+    font-size: var(--fs-18);
     text-transform: uppercase;
     border-radius: 4px;
     margin-top: 15px;
