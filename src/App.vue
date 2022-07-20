@@ -4,19 +4,15 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <nav>
-    <Navbar />
-  </nav>
-  <main class="container">
+  <Navbar />
+  <div class="container">
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component"></component>
       </transition>
     </router-view>
-  </main>
-  <footer>
-    <Footer />
-  </footer>
+  </div>
+  <Footer />
 </template>
 
 <style>
