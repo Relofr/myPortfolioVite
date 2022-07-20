@@ -1,28 +1,25 @@
 <template>
     <div>
-        <p data-aos="fade-up" data-aos-delay="75" id="case-studies-title" class="flex primary-heading">Case Studies</p>
-        <div class="flex-grid-thirds">
-            <div class="col">
+        <p data-aos="fade-up" data-aos-delay="80" id="case-studies-title" class="flex primary-heading">Case Studies</p>
+
+        <div class="grid2x2">
+            <div class="box">
                 <Card title="Tracy Aviary UX/UI" date="July 13th, 2022" src="/tracyaviary/hero-ta.png"
                     route="tracy-aviary" />
             </div>
-            <div class="col">
+            <div class="box">
                 <Card title="USDA Redesign" date="April 16th, 2022" src="/usda/hero-usda.png" route="usda" />
             </div>
-            <!-- <div class="col">
+            <div class="box">
                 <Card title="ReClaim App" src="/reclaim/hero-reclaim.png" route="reclaim" />
             </div>
-            <div class="col">
+            <div class="box">
                 <Card title="UX/UI Portfolio" src="/portfolio/hero-portfolio.png" route="portfolio" />
-            </div> -->
-        </div>
-        <p data-aos="fade-up" data-aos-delay="75" id="case-studies-title" class="flex primary-heading">Daily UI</p>
-        <div class="flex-grid-thirds">
-            <div class="col">
+            </div>
+            <div class="box">
                 <Card title="DailyUI" src="/dailyui/hero-dailyui.png" route="daily-ui" />
             </div>
         </div>
-
     </div>
 </template>
 
@@ -44,27 +41,29 @@ export default {
     justify-content: center;
 }
 
-.flex-grid-thirds {
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid2x2>div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid2x2>div>div {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.flex-grid-thirds .col {
-    width: 32%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.col {
-    display: flex;
-    align-content: space-between;
+    flex-direction: row;
 }
 
 @media (max-width: 800px) {
-    .flex-grid-thirds {
+    .grid2x2 {
         display: flex;
         flex-direction: column;
 

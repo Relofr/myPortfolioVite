@@ -14,15 +14,15 @@
   --fw-semi-bold: 500;
   --fw-bold: 700;
 
-  --fs-14: 0.876rem;
-  --fs-16: 1rem;
-  --fs-18: 1.1250rem;
-  --fs-32: 2rem;
-  --fs-40: 2.5rem;
-  --fs-56: 3.5rem;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-22: 22px;
+  --fs-26: 26px;
+  --fs-36: 36px;
+  --fs-144: 144px;
 
-  --primary-heading: var(--fs-32);
-  --secondary-heading: var(--fs-18);
+  --primary-heading: var(--fs-36);
+  --secondary-heading: var(--fs-22);
 }
 
 * {
@@ -36,7 +36,7 @@ html {
   font-family: "Be Vietnam Pro", sans-serif;
   background: #fff;
   color: var(--primary-text-color);
-  font-size: var(--fs-16);
+  font-size: var(--fs-22);
   line-height: 1.5;
   font-weight: var(--fw-regular);
   min-height: 100vh;
@@ -52,6 +52,10 @@ ul {
 
 p {
   padding: 10px 0
+}
+
+img {
+  width: 100%;
 }
 
 .flex {
@@ -72,7 +76,7 @@ p {
 
 .secondary-heading {
   font-size: var(--secondary-heading);
-  font-weight: var(--fw-semi-bold);
+  font-weight: var(--fw-bold);
   margin-bottom: 10px;
 }
 
@@ -104,26 +108,20 @@ p {
   font-weight: var(--fw-regular);
 }
 
-.fs-14 {
-  font-size: var(--fs-14);
-}
 
-.fs-16 {
-  font-size: var(--fs-16);
-}
 
 .fs-18 {
   font-size: var(--fs-18);
 }
 
-.fs-32 {
-  font-size: var(--fs-32)
+.fs-22 {
+  font-size: var(--fs-22);
 }
 
-.fs-40 {
-  font-size: var(--fs-40);
+.fs-36 {
+  font-size: var(--fs-36)
 }
 
-.fs-56 {
-  font-size: var(--fs-56);
+.fs-144 {
+  font-size: var(--fs-144);
 }

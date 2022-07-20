@@ -7,7 +7,7 @@
                     <RouterLink to="/"><fa icon="home" size="lg"></fa>Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/projects"><fa icon="folder-tree" size="lg"></fa>Projects</RouterLink>
+                    <RouterLink to="/projects"><fa icon="folder" size="lg"></fa>Projects</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/about"><fa icon="gamepad" size="lg"></fa>About</RouterLink>
@@ -35,7 +35,7 @@ export default {
     justify-content: space-between;
     height: 70px;
     padding: 20px 10%;
-    font-size: var(--fs-13);
+    font-size: var(--fs-16);
 }
 
 .main-nav ul {
@@ -44,6 +44,7 @@ export default {
 
 .main-nav ul li {
     padding: 0 20px;
+    text-align: center;
 }
 
 .main-nav svg {
@@ -52,7 +53,7 @@ export default {
 
 .main-nav a {
     color: var(--primary-color);
-    font-size: var(--fs-13);
+    font-size: var(--fs-16);
 }
 
 .logo {
@@ -66,7 +67,7 @@ export default {
     align-items: center;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 800px) {
     .logo {
         display: none;
     }

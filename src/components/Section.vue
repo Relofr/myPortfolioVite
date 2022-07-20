@@ -1,15 +1,15 @@
 <template>
-    <div data-aos="fade-up" data-aos-delay="75">
+    <div data-aos="fade-up" data-aos-delay="80">
         <div v-show="heroImage" class="hero-container">
             <img class="hero-image" :src="`src/assets/images/` + heroImage">
-            <div v-show="sectionTitle" class="section-title primary-heading fs-56">{{ sectionTitle }}</div>
+            <div v-show="sectionTitle" class="section-title primary-heading">{{ sectionTitle }}</div>
         </div>
         <div class="even-columns section-container" :class="{ 'reverseColumns': isReverse }">
             <div v-show="contentOne" class="col">
-                <span class=" primary-heading">{{ sectionTitle }}</span>
-                <p>{{ contentOne }}</p>
-                <p>{{ contentTwo }}</p>
-                <p>{{ contentThree }}</p>
+                <span class="primary-heading">{{ sectionTitle }}</span>
+                <p class="fs-22">{{ contentOne }}</p>
+                <p class="fs-22">{{ contentTwo }}</p>
+                <p class="fs-22">{{ contentThree }}</p>
                 <Button v-show="button" @click="downloadResume()" isPrimary text="resume" iconFab="google-drive"
                     size="lg" />
             </div>
