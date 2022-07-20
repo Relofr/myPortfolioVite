@@ -61,10 +61,6 @@ export default {
     align-content: center;
 }
 
-.case-studies-container {
-    height: 100vh;
-}
-
 .about-me-container .col {
     justify-content: flex-start;
 }
@@ -77,17 +73,6 @@ export default {
     width: 350px;
     border-radius: 50%;
 }
-
-// .about-me-content {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-// }
-
-// #profile-picture {
-//     width: 350px;
-//     border-radius: 50%;
-// }
 
 .down-arrow {
     transform: translateY(-50px);

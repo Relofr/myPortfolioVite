@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Section sectionTitle="DailyUI" heroImage="hero-dailyui.png" />
+        <Section sectionTitle="DailyUI" heroImage="/dailyui/hero-dailyui.png" />
     </div>
 </template>
 

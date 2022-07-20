@@ -39,7 +39,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 footer {
     flex-shrink: 0;
 }

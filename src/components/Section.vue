@@ -9,6 +9,7 @@
                 <span class=" primary-heading">{{ sectionTitle }}</span>
                 <p>{{ contentOne }}</p>
                 <p>{{ contentTwo }}</p>
+                <p>{{ contentThree }}</p>
                 <Button v-show="button" @click="downloadResume()" isPrimary text="resume" iconFab="google-drive"
                     size="lg" />
             </div>
@@ -49,6 +50,9 @@ export default {
             type: String,
         },
         contentTwo: {
+            type: String,
+        },
+        contentThree: {
             type: String,
         },
         button: {

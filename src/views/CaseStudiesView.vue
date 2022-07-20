@@ -1,9 +1,10 @@
 <template>
     <div>
-        <p data-aos="fade-up" data-aos-delay="75" id="case-studies-title" class="flex primary-heading">Projects</p>
+        <p data-aos="fade-up" data-aos-delay="75" id="case-studies-title" class="flex primary-heading">Case Studies</p>
         <div class="flex-grid-thirds">
             <div class="col">
-                <Card title="Tracy Aviary UX/UI" date="July 13th, 2022" src="/tracyaviary/hero-ta.png" route="tracy-aviary" />
+                <Card title="Tracy Aviary UX/UI" date="July 13th, 2022" src="/tracyaviary/hero-ta.png"
+                    route="tracy-aviary" />
             </div>
             <div class="col">
                 <Card title="USDA Redesign" date="April 16th, 2022" src="/usda/hero-usda.png" route="usda" />
@@ -14,10 +15,14 @@
             <div class="col">
                 <Card title="UX/UI Portfolio" src="/portfolio/hero-portfolio.png" route="portfolio" />
             </div> -->
+        </div>
+        <p data-aos="fade-up" data-aos-delay="75" id="case-studies-title" class="flex primary-heading">Daily UI</p>
+        <div class="flex-grid-thirds">
             <div class="col">
                 <Card title="DailyUI" src="/dailyui/hero-dailyui.png" route="daily-ui" />
             </div>
         </div>
+
     </div>
 </template>
 
@@ -41,8 +46,9 @@ export default {
 
 .flex-grid-thirds {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .flex-grid-thirds .col {
@@ -65,7 +71,7 @@ export default {
         .col {
             width: 100%;
             margin: 0 0 25px 0;
-            justify-content: space-between;
+            justify-content: center;
             display: flex;
         }
     }
