@@ -1,5 +1,8 @@
 {
   "name": "myportfoliovite",
+  "engines": {
+    "node": "16.15.1"
+  },
   "private": true,
   "version": "0.0.0",
   "scripts": {
